@@ -2,9 +2,10 @@
   "name": "@repo/db",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
-  "exports" : {
-    "./client" : "./src/index.ts"
+  "exports": {
+    "./client": "./src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,10 +13,8 @@
     "@repo/typescript-config": "workspace:*"
   },
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@prisma/client": "6.8.2",
-    "pnpm": "^10.11.0",
     "prisma": "^6.8.2"
   }
 }

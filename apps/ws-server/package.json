@@ -15,7 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@types/ws": "^8.18.1",
     "ws": "^8.18.2"

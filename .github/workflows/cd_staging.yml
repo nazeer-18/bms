@@ -12,12 +12,14 @@ jobs:
                 mkdir -p ~/.ssh
                 echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/private_key
                 chmod 600 ~/.ssh/private_key
+                echo ~/.ssh/private_key
 
             - name: Deploy on server
               run: |
                 ssh -o StrictHostKeyChecking=no -i /home/runner/.ssh/private_key ubuntu@65.0.109.27 << 'EOF'
-                cd /BMS/
-                git pull origin main
+                echo "Deploying to staging server..."
+                cd bms/
+                git pull origin master
                 pnpm install
                 pnpm run build
                 pm2 restart all

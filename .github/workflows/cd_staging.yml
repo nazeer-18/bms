@@ -16,7 +16,7 @@ jobs:
 
             - name: Deploy on server
               run: |
-                ssh -o StrictHostKeyChecking=no -i /home/runner/.ssh/private_key ubuntu@65.0.109.27 << 'EOF'
+                echo yes | ssh -i ~/.ssh/private_key ubuntu@65.0.109.27 << 'EOF'
                 echo "Deploying to staging server..."
                 cd bms/
                 git pull origin master

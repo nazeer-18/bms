@@ -12,7 +12,6 @@ jobs:
                 mkdir -p ~/.ssh
                 echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/private_key
                 chmod 600 ~/.ssh/private_key
-                echo ~/.ssh/private_key
 
             - name: Deploy on server
               run: |
